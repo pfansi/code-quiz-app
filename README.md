@@ -27,3 +27,11 @@ The user will be able to save and see all its previous scores.
 ## Git Repository
 
 I created a git repository folder that will host the finish website. The Repository will be found [here](https://github.com/pfansi/code-quiz-app)
+
+## What have you done
+
+- Created a readme.md file to describe the different building phases of the application.
+
+- breaked down the app functionality using pseudo code language.
+
+- created an index.html, a css file, a javascript file.
