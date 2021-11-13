@@ -23,3 +23,7 @@ The user will be able to save and see all its previous scores.
 - if the user wants to save the result - he needs to enter his initial.
 
 - if result is saved , previous result can be view by pressing a button .
+
+## Git Repository
+
+I created a git repository folder that will host the finish website. The Repository will be found [here](https://github.com/pfansi/code-quiz-app)
