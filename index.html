@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Meta tag viewport allows to optimized the page view on smaller divices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- a descriptive title for the project-->
+    <title>javascript Code Quiz Web Application</title>
+
+    <!--This is the link to the css file that styled the page -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <!--Link to the high score page-->
+      <a href="./highscore.html">View Highscores</a>
+    </header>
+
+    <main class="main" id="wrapper">
+      <!--This section will show the timer-->
+      <section class="timerStart"></section>
+
+      <!-- This section will show the questonnaire and the result-->
+      <section class="questionQuiz">
+        <h1>Javascript Quiz Challenge</h1>
+        <p>
+          Please click on the correct answer - Incorrect answer will reduce 10
+          second on you current time
+        </p>
+        <!--The question list will appear here-->
+        <ul class="questionList"></ul>
+        <!--Button to start quiz-->
+        <button class="startQuiz">Start Quiz</button>
+      </section>
+    </main>
+  </body>
+</html>

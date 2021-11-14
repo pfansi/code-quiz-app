@@ -35,3 +35,5 @@ I created a git repository folder that will host the finish website. The Reposit
 - breaked down the app functionality using pseudo code language.
 
 - created an index.html, a css file, a javascript file.
+
+* Index and highscore html structure created.
