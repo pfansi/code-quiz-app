@@ -1,4 +1,4 @@
-// This script page will take the corect answer and set them in the local storage.
+// This script page will take the correct answer and set them in the local storage.
 //
 
 
@@ -38,7 +38,7 @@ var questionIndex = 0;
 // let declare and assign variable to the page DOM
 var runTimer = document.querySelector("#runTimer");
 var startQuiz = document.querySelector("#startQuiz");
-var questionsDiv = document.querySelector(".questionsQuiz");
+var questionQuiz = document.querySelector(".questionsQuiz");
 var wrapper = document.querySelector("#wrapper");
 
 // let declare the total time of the quiz
@@ -96,3 +96,126 @@ function showQuestion(questionIndex) {
         listAnswer.addEventListener("click", (compare));
     })
 }
+// creating a function that will compare the user choice to the correct answer
+function compare(event) {
+    var eventEl = event.target;
+
+    if (eventEl.matches("li")) {
+
+        var divEl = document.createElement("div");
+        divEl.setAttribute("id", "divEl");
+
+        // check if the answer is correct them increment the user score
+        if (eventEl.textContent == questions[questionIndex].questionAnswer) {
+            userScore++;
+            divEl.textContent = "Hooray! The Correct answer is:  " + questions[questionIndex].questionAnswer;
+            
+        } else {
+            // if the answer is wrong then 10 second will be deducted to the timer
+            totalTime = totalTime - timeDeduction;
+            divEl.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].questionAnswer;
+        }
+
+    }
+    // the loop will increment to the next question
+    questionIndex++;
+
+    if (questionIndex >= questions.length) {
+        // this condition will trigger the game over function
+        gameOver();
+
+        // this will print the final user score in the new div
+        divEl.textContent = "Game Over!" + " " + "You got  " + userScore + "out of" + questions.length + " Correct!";
+    } else {
+        showQuestion(questionIndex);
+    }
+
+    questionQuiz.appendChild(divEl);
+
+}
+
+// we are creating the game over function  that will append these elements
+function gameOver() {
+    questionQuiz.innerHTML = "";
+    runTimer.innerHTML = "";
+
+    // creating a Title header
+    var h1El = document.createElement("h1");
+    h1El.setAttribute("id", "h1El");
+    h1El.textContent = "Game Over!"
+
+    questionQuiz.appendChild(h1El);
+
+    // creating a paragraph
+    var pEl1 = document.createElement("p");
+    pEl1.setAttribute("id", "pEl1");
+
+    questionQuiz.appendChild(pEl1);
+
+    // Calculates time remaining and replaces it with score
+    if (totalTime >= 0) {
+        var timeLeft = totalTime;
+        var pEl2 = document.createElement("p");
+        clearInterval(intervalTimer);
+        pEl2.textContent = "Your final score is: " + timeLeft;
+
+        questionQuiz.appendChild(pEl2);
+    }
+
+    // creating a label
+    var labelEl = document.createElement("label");
+    labelEl.setAttribute("id", "labelEl");
+    labelEl.textContent = "Enter your initials: ";
+
+    questionQuiz.appendChild(labelEl);
+
+    // creating input element
+    var inputEl = document.createElement("input");
+    inputEl.setAttribute("type", "text");
+    inputEl.setAttribute("id", "initials");
+    inputEl.textContent = "";
+
+    questionQuiz.appendChild(inputEl);
+
+    // creating a submit button
+    var submitEl = document.createElement("button");
+    submitEl.setAttribute("type", "submit");
+    submitEl.setAttribute("id", "Submit");
+    submitEl.textContent = "Submit";
+
+    questionQuiz.appendChild(submitEl);
+
+    // after a click this function will set or retrieve data from the local storage
+    submitEl.addEventListener("click", function () {
+        var initials = inputEl.value;
+
+        if (initials === null) {
+
+            console.log("No value entered!");
+
+        } else {
+            var scoreArr = {
+                initials: initials,
+                userScore: timeLeft
+            }
+            console.log(scoreArr);
+
+            var saveScores = localStorage.getItem("saveScores");
+            if (saveScores === null) {
+                saveScores = [];
+                
+            } else {
+                saveScores = JSON.parse(saveScores);
+            }
+
+            saveScores.push(scoreArr);
+
+            var newScore = JSON.stringify(saveScores);
+            localStorage.setItem("allScores", newScore);
+            // Travels to final page
+            window.location.replace("./HighScores.html");
+        }
+    });
+
+}
+
