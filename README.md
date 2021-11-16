@@ -37,3 +37,14 @@ I created a git repository folder that will host the finish website. The Reposit
 - created an index.html, a css file, a javascript file.
 
 * Index and highscore html structure created.
+
+* Page styled on an external css sheet.
+
+* variables for the questions defined
+
+* Variables declared for the HTML document DOM
+
+* Function to start and stop the game created 
+
+* created a function that will list the question and the answers
+
