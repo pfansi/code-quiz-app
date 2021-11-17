@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
     <!--Meta tag viewport allows to optimized the page view on smaller divices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- a descriptive title for the project-->
-    <title>Highscores View page</title>
+    <title>Highscore Page</title>
 
     <!--This is the link to the css file that styled the page -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <main class="main" id="wrapper">
-      
-      <!-- This section will show the questonnaire and the result-->
+    <!-- This is a wrapper -->
+    <main id="wrapper">
+
+      <!-- section for the timer -->
+      <section id="runTimer"></section>
+
+      <!-- section for the quiz -->
       <section id="questionQuiz">
-        <h1>Highscores</h1>
+        <h1>Highscore</h1>
+        <ul id="highScore"></ul>
 
-        <!--The highscore list will appear here-->
-        <ul id="highscoreList"></ul>
-
-        <!--Button to clear the highscore results-->
-        <button id="clear" class="btn-clear">Clear Highscores</button>
-        <!--This section will show the button to clear and the link to go back to the quiz page-->
-        <button id="return" class="btn-return">Back to Quiz</a></button>
+        <!-- Buttons to return to quiz and clear score data-->
+        <button id="returnQuiz">Return To Quiz</button>
+        <button id="clear" value="reset">Clear Highscore</button>
       </section>
     </main>
-    <script src="highscores,js"></script>
+    <script src="highscore.js"></script>
   </body>
 </html>

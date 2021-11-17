@@ -13,28 +13,29 @@
   </head>
 
   <body>
-    <header>
-      <!--Link to the high score page-->
-      <button><a href="./highscore.html">View Highscores</a></button>
-    </header>
+    <!--Link to the highscore page-->
+    <a href="highscore.html">View Highscore</a>
 
-    <main class="main" id="wrapper">
+    <main id="wrapper">
       <!--This section will show the timer-->
-      <section class="timerStart" id="runTimer">uuuuuuuuuuuuuuuuu</section>
+      <section id="runTimer"></section>
 
       <!-- This section will show the questonnaire and the result-->
       <section id="questionQuiz">
         <h1>Javascript Quiz Challenge</h1>
         <p>
           Please click on the correct answer. <br />
-          Incorrect answer will take 10 second off your current time.
+          Incorrect answer will take 10 second off the left for a quiz session.
         </p>
+
         <!--The question list will appear here-->
-        <ul class="questionList"></ul>
-        <!--Button to start quiz-->
+        <ul id="ulEl"></ul>
+
+        <!--Button to start the quiz-->
         <button id="startQuiz">Start Quiz</button>
       </section>
     </main>
+
     <script src="script.js"></script>
   </body>
 </html>

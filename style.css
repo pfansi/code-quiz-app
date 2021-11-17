@@ -1,63 +1,110 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  background-color: rgb(75, 69, 69);
-  color: white;
-  position: relative;
+/* style the wrapper*/
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
+  height: 500px;
+  border: 5px solid #8ebeda;
+  text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  position: relative;
 }
 
-header button {
-  line-height: 1.5rem;
-  width: 300px;
+body {
+  text-align: center;
 }
 
-button:hover {
-  background-color: turquoise;
+/* style the button to start the quiz*/
+#startQuiz {
+  background-color: #8ebeda;
+  margin: auto;
+  padding: 15px 32px;
+  font-size: 20px;
+}
+
+/* style the timer*/
+#runTimer {
+  font-size: large;
+  margin: 25px;
+  font-weight: bolder;
+}
+
+/* style the button to return to home page*/
+#returnQuiz {
+  background-color: #8ebeda;
+
+  padding: 10px;
+  font-size: 20px;
+
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* style the button to clear the score*/
+#clear {
+  background-color: #8ebeda;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
 }
 
 button {
-  background-color: #8ebeda;
   border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.2em;
-  letter-spacing: 0.21px;
-  line-height: 1rem;
-  max-width: 250px;
-  padding: 20px 25px;
-  text-align: center;
-  margin: 0.6em auto;
-  display: block;
-  color: black;
-  font-style: bolder;
 }
 
-.questionQuiz {
-  position: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.timerStart {
-  border: solid black;
-  text-align: center;
-  height: 50px;
-  font-size: 2rem;
+textarea {
+  width: 50%;
+  margin: 30px;
 }
 
+/* style the submit button*/
+#Submit {
+  background-color: #8ebeda;
+  padding: 15px 32px;
+  font-size: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+/*style the input initial box*/
+input {
+  margin-bottom: 20px;
+  width: 50%;
+  border: 1px solid lightgray;
+  height: 25px;
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* style the question and answer list*/
 li {
   background-color: #8ebeda;
-  margin-top: 10px;
+  margin: 20px;
   padding: 5px 15px;
-  width: 80%;
+  width: 70%;
   font-size: 18px;
-  color: white;
+  list-style: none;
 }
 
+#divEl {
+  margin-top: 25px;
+  border-top: 1px solid lightgray;
+}
+
+/* Resizing content to fit smaller devices */
 @media screen and (max-width: 786px) {
-  /* Resized content to fit smaller screen  */
   body {
-    min-width: 200px;
+    width: auto;
+    min-height: 300px;
   }
 }
