@@ -18,11 +18,11 @@ The user will be able to save and see all its previous scores.
 
 - if timer decrementing is equal to zero then no more questions.
 
-- Result score is shown and suer asked if he want to save result.
+- Result was shown and the user asked if he wanted to save the result.
 
 - if the user wants to save the result - he needs to enter his initial.
 
-- if result is saved , previous result can be view by pressing a button .
+- if the result is saved , the previous result can be viewed by pressing a button .
 
 ## Git Repository
 
@@ -36,15 +36,34 @@ I created a git repository folder that will host the finish website. The Reposit
 
 - created an index.html, a css file, a javascript file.
 
-* Index and highscore html structure created.
+- Index and highscore html structure created.
 
-* Page styled on an external css sheet.
+- Page styled on an external css sheet.
 
-* variables for the questions defined
+- variables for the questions defined
 
-* Variables declared for the HTML document DOM
+- Variables declared for the HTML document DOM
 
-* Function to start and stop the game created 
+- Function to start and stop the game created
 
-* created a function that will list the question and the answers
+- created a function that will list the question and the answers
 
+## Screenshots
+
+- The user clicks on the button to start a quiz. ![screenshot](./images/start_quiz.jpg)
+
+- The user is presented with multi-choice questions . ![screenshot](./images/multi_choices.jpg)
+
+- while the timer is running , the App returns a wrong or correct message when the user selects his answer. ![screenshot](./images/timer_start.jpg)
+
+- When the game ends , the user can register his score with his initials. ![screenshot](./images/register_score.jpg)
+
+- After simitting his initial score the user is now presented with a list of previous scores. ![screenshot](./images/list_score.jpg)
+
+## Link to the deploy application
+
+https://pfansi.github.io/code-quiz-app/
+
+## link to the git hub repository
+
+https://github.com/pfansi/code-quiz-app

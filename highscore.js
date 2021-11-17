@@ -27,5 +27,5 @@ if (scoreList !== null) {
 }
 //This  Event listener will take back to the home page .
 returnQuiz.addEventListener("click", function () {
-    window.location.replace("./index.html");
+    window.location.replace("index.html");
 });
