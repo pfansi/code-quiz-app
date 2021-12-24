@@ -50,15 +50,15 @@ I created a git repository folder that will host the finish website. The Reposit
 
 ## Screenshots
 
-- The user clicks on the button to start a quiz. ![screenshot](./images/start_quiz.jpg)
+- The user clicks on the button to start a quiz. ![screenshot](./images/start_quiz.JPG)
 
-- The user is presented with multi-choice questions . ![screenshot](./images/multi_choices.jpg)
+- The user is presented with multi-choice questions . ![screenshot](./images/multi_choices.JPG)
 
-- while the timer is running , the App returns a wrong or correct message when the user selects his answer. ![screenshot](./images/timer_start.jpg)
+- while the timer is running , the App returns a wrong or correct message when the user selects his answer. ![screenshot](./images/timer_start.JPG)
 
-- When the game ends , the user can register his score with his initials. ![screenshot](./images/register_score.jpg)
+- When the game ends , the user can register his score with his initials. ![screenshot](./images/register_score.JPG)
 
-- After simitting his initial score the user is now presented with a list of previous scores. ![screenshot](./images/list_score.jpg)
+- After simitting his initial score the user is now presented with a list of previous scores. ![screenshot](./images/list_score.JPG)
 
 ## Link to the deploy application
 
